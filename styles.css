@@ -47,13 +47,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .ticket-right img {
   width: 100%;
-  height: 80%;
+  height: calc(100% - 60px);
   object-fit: cover;
+  display: block;
 }
 
 /* BARRA TIPO CODIGO */
@@ -122,24 +123,59 @@ button {
   color: #ffd54f;
 }
 
-/* GRID FINAL */
+/* GALERIA FINAL */
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 14px;
   margin-top: 20px;
 }
 
-.image-grid img {
+.photo-card {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 210px;
+  background: #000;
   border: 2px solid #ffd54f;
-  border-radius: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background: #000;
 }
 
 /* ANIMACION */
 @keyframes fadeIn {
-  from {opacity: 0; transform: scale(0.9);}
-  to {opacity: 1; transform: scale(1);}
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+
+  .ticket {
+    flex-direction: column;
+    margin: 20px auto;
+  }
+
+  .ticket-right {
+    min-height: 280px;
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .photo-card {
+    height: 180px;
+  }
 }
