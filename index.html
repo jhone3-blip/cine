@@ -7,37 +7,36 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="overlay"></div>
 
-<div class="overlay"></div>
+  <div class="ticket">
+    <div class="ticket-left">
+      <h1>🎬 SCARY MOVIE NIGHT</h1>
+      <p class="name">Invitada: Michelle</p>
 
-<div class="ticket">
-  <div class="ticket-left">
-    <h1>🎬 SCARY MOVIE NIGHT</h1>
-    <p class="name">Invitado: Michelle</p>
+      <div class="details">
+        <p>📍 Cine Colombia</p>
+        <p>🕒 7:00 PM</p>
+        <p>🍿 Sala VIP</p>
+      </div>
 
-    <div class="details">
-      <p>📍 Cine Colombia</p>
-      <p>🕒 7:00 PM</p>
-      <p>🍿 Sala VIP</p>
+      <p class="question">¿Aceptas esta entrada?</p>
+
+      <div class="buttons">
+        <button id="yesButton">Aceptar 🎟️</button>
+        <button id="noButton">Rechazar 😅</button>
+      </div>
+
+      <p id="response"></p>
+      <div id="imageContainer"></div>
     </div>
 
-    <p class="question">¿Aceptas esta entrada?</p>
-
-    <div class="buttons">
-      <button id="yesButton">Aceptar 🎟️</button>
-      <button id="noButton">Rechazar 😅</button>
+    <div class="ticket-right">
+      <img src="./scary6-1.webp" alt="Poster Scary Movie">
+      <div class="barcode"></div>
     </div>
-
-    <p id="response"></p>
-    <div id="imageContainer"></div>
   </div>
 
-  <div class="ticket-right">
-       <img src="C:\Users\jhone\cine\images\scary6-5.jpg">
-    <div class="barcode"></div>
-  </div>
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
