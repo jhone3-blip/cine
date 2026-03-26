@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: black;
+  overflow: hidden;
+}
+
+/* EFECTO CINE OSCURO */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.95) 70%);
+  z-index: 0;
+}
+
+/* TICKET */
+.ticket {
+  position: relative;
+  z-index: 1;
+  width: 900px;
+  max-width: 95%;
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(255,0,0,0.3);
+  border: 2px solid #d4af37;
+  animation: fadeIn 1s ease;
+}
+
+.ticket-left {
+  flex: 2;
+  background: #111;
+  padding: 30px;
+  color: white;
+}
+
+.ticket-right {
+  flex: 1;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticket-right img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+
+/* BARRA TIPO CODIGO */
+.barcode {
+  width: 80%;
+  height: 40px;
+  background: repeating-linear-gradient(
+    90deg,
+    #fff,
+    #fff 2px,
+    #000 2px,
+    #000 4px
+  );
+  margin: 10px 0;
+}
+
+h1 {
+  color: #ffd54f;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.details p {
+  margin: 5px 0;
+}
+
+.question {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: #ff5252;
+}
+
+.buttons {
+  margin-top: 20px;
+  position: relative;
+  min-height: 80px;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#yesButton {
+  background: red;
+  color: white;
+}
+
+#noButton {
+  position: absolute;
+  background: white;
+  color: black;
+}
+
+#response {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #ffd54f;
+}
+
+/* GRID FINAL */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border: 2px solid #ffd54f;
+  border-radius: 10px;
+}
+
+/* ANIMACION */
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
